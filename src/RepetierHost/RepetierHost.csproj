@@ -76,6 +76,7 @@
     <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
     <Reference Include="OpenTK.Compatibility, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
     <Reference Include="OpenTK.GLControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL" />
+    <Reference Include="QuickFont, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bb90a3fa4dc55d9f, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -125,6 +126,7 @@
     <Compile Include="model\BasicConfiguration.cs" />
     <Compile Include="model\BeltCalculator.cs" />
     <Compile Include="model\Commands.cs" />
+    <Compile Include="model\Coordinate.cs" />
     <Compile Include="model\Custom.cs" />
     <Compile Include="model\EEPROMMarlinParameter.cs" />
     <Compile Include="model\EEPROMParameter.cs" />

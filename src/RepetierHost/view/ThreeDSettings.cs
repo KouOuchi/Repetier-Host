@@ -527,5 +527,10 @@ Immediate (slow)*/
             cutFaces.BackColor = Color.RoyalBlue;
             insideFaces.BackColor = Color.Lime;
         }
+
+        private void showCoordinate_CheckedChanged(object sender, EventArgs e)
+        {
+            Main.main.Update3D();
+        }
     }
 }

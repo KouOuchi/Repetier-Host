@@ -53,7 +53,7 @@ namespace RepetierHost.view
         public float zoom = 1.0f;
         public Matrix4 lookAt, persp, modelView;
         public float nearDist, farDist, aspectRatio, nearHeight, midHeight;
-
+        Coordinate coord;
 
         public ThreeDView view = null;
 
@@ -784,6 +784,8 @@ namespace RepetierHost.view
                 if (Control.MouseButtons != MouseButtons.None)
                     DrawViewpoint();
 
+                DrawCoordinate();
+
                 gl.SwapBuffers();
                 fpsTimer.Stop();
                 // double time = fpsTimer.Elapsed.Milliseconds / 1000.0;
@@ -1423,6 +1425,28 @@ namespace RepetierHost.view
         private void toolIsometric_Click(object sender, EventArgs e)
         {
             isometricView();
+        }
+
+        private void DrawCoordinate()
+        {
+            if (Main.threeDSettings.showCoordinate.Checked)
+            {
+                bool firstchance = false;
+
+                if (coord == null)
+                {
+                    coord = new Coordinate();
+                    firstchance = true;
+                }
+
+                coord.Draw(gl.Width, gl.Height, cam.phi, cam.theta);
+
+                if (firstchance) gl.Invalidate();
+            }
+            else
+            {
+                coord = null;
+            }
         }
     }
 }

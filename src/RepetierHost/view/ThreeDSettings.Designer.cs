@@ -161,6 +161,7 @@
             this.groupVisualization.SuspendLayout();
             this.tabLights.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.showCoordinate = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.tdSettings)).BeginInit();
             this.SuspendLayout();
             // 
@@ -710,6 +711,7 @@
             this.tabGeneral.Controls.Add(this.comboDrawMethod);
             this.tabGeneral.Controls.Add(this.groupPrintbed);
             this.tabGeneral.Controls.Add(this.labelDrawMethod);
+            this.tabGeneral.Controls.Add(this.showCoordinate);
             this.tabGeneral.Location = new System.Drawing.Point(4, 22);
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.Size = new System.Drawing.Size(486, 383);
@@ -1476,6 +1478,17 @@
             // 
             this.tdSettings.DataSource = typeof(RepetierHost.view.ThreeDSettings);
             // 
+            // showCoordinate
+            // 
+            this.showCoordinate.AutoSize = true;
+            this.showCoordinate.Location = new System.Drawing.Point(23, 263);
+            this.showCoordinate.Name = "showCoordinate";
+            this.showCoordinate.Size = new System.Drawing.Size(108, 16);
+            this.showCoordinate.TabIndex = 17;
+            this.showCoordinate.Text = "Show coordinate";
+            this.showCoordinate.UseVisualStyleBackColor = true;
+            this.showCoordinate.CheckedChanged += new System.EventHandler(this.showCoordinate_CheckedChanged);
+            // 
             // ThreeDSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1638,5 +1651,6 @@
         private System.Windows.Forms.Button buttonGeneralColorDefaults;
         private System.Windows.Forms.Button buttonModelColorsDefaults;
         public System.Windows.Forms.CheckBox checkAutoenableParallelInTopView;
+        public System.Windows.Forms.CheckBox showCoordinate;
     }
 }

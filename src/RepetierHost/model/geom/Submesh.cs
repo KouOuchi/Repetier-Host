@@ -133,6 +133,10 @@ namespace RepetierHost.model.geom
         /// </summary>
         public void Compress()
         {
+            Compress(false, 0);
+        }
+        public void Compress(bool override_color, int color)
+        {
             glVertices = new float[3 * vertices.Count];
             glNormals = new float[3 * vertices.Count];
             glColors = new int[vertices.Count];
@@ -140,7 +144,7 @@ namespace RepetierHost.model.geom
             glTriangles = new int[triangles.Count * 3];
             glTrianglesError = new int[trianglesError.Count * 3];
             UpdateDrawLists();
-            UpdateColors();
+            UpdateColors(override_color, color);
             vertices.Clear();
         }
         public int VertexId(RHVector3 v)
@@ -184,19 +188,35 @@ namespace RepetierHost.model.geom
 
         public void UpdateColors()
         {
+            UpdateColors(false, 0);
+        }
+
+        public void UpdateColors(bool override_color, int color)
+        {
             foreach (SubmeshTriangle t in triangles)
             {
-                glColors[t.vertex1] = glColors[t.vertex2] = glColors[t.vertex3] = ConvertColorIndex(t.color);
+                if(!override_color)
+                    glColors[t.vertex1] = glColors[t.vertex2] = glColors[t.vertex3] = ConvertColorIndex(t.color);
+                else
+                    glColors[t.vertex1] = glColors[t.vertex2] = glColors[t.vertex3] = color;
+
                 //glColors2[t.vertex1] = glColors2[t.vertex2] = glColors2[t.vertex3] = ConvertColorIndex((t.color == Submesh.MESHCOLOR_FRONTBACK ? Submesh.MESHCOLOR_BACK : t.color));
             }
             foreach (SubmeshTriangle t in trianglesError)
             {
-                glColors[t.vertex1] = glColors[t.vertex2] = glColors[t.vertex3] = ConvertColorIndex(t.color);
+                if (!override_color)
+                    glColors[t.vertex1] = glColors[t.vertex2] = glColors[t.vertex3] = ConvertColorIndex(t.color);
+                else
+                    glColors[t.vertex1] = glColors[t.vertex2] = glColors[t.vertex3] = color;
+
                 //glColors2[t.vertex1] = glColors2[t.vertex2] = glColors2[t.vertex3] = ConvertColorIndex((t.color == Submesh.MESHCOLOR_FRONTBACK ? Submesh.MESHCOLOR_BACK : t.color));
             }
             foreach (SubmeshEdge e in edges)
             {
-                glColors[e.vertex1] = glColors[e.vertex2] = ConvertColorIndex(e.color);
+                if (!override_color)
+                    glColors[e.vertex1] = glColors[e.vertex2] = ConvertColorIndex(e.color);
+                else
+                    glColors[e.vertex1] = glColors[e.vertex2] = color;
             }
             if (glBuffer != null)
             {
