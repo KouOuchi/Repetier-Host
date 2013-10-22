@@ -528,5 +528,115 @@ EEPROMを上書きしますか?</t>
 <t id="L_OBJECTS_OUTSIDE_SLICE_QUEST" ver="8">プリントエリアの外に一つ以上のものがあります。スライスしてもよろしいですか?</t>
 <t id="L_CNC_ROUTER" ver="8">CNC ルーター</t>
 <t id="L_SLIC3R_VERSION" ver="8">Slic3r バージョン</t>
+<t id="L_MODEL_ERRORS" ver="9">モデルエラー:</t>
+<t id="L_REPAIR" ver="9">修復</t>
+<t id="L_SPLIT" ver="9">分割</t>
+<t id="L_YES" ver="9">はい</t>
+<t id="L_NO" ver="9">いいえ</t>
+<t id="L_MODEL_CHANGED_RELOAD" ver="9"><![CDATA[いくつかのファイルが変更されました.
+再読み込みしますか?]]></t>
+<t id="L_FILES_CHANGED" ver="9">ファイル変更</t>
+<t id="L_INNER_FACES" ver="9">インナーフェース:</t>
+<t id="L_BACKGROUND_TOP" ver="9">背景 上:</t>
+<t id="L_BACKGROUND_BOTTOM" ver="9">背景 下:</t>
+<t id="L_PRINTER_FRAME" ver="9">プリンタ枠:</t>
+<t id="L_ISOMETRIC_VIEW" ver="9">アイソメ ビュー</t>
+<t id="L_BOTTOM_VIEW" ver="9">下からのビュー</t>
+<t id="L_LEFT_VIEW" ver="9">左からのビュー</t>
+<t id="L_RIGHT_VIEW" ver="9">右からのビュー</t>
+<t id="L_FRONT_VIEW" ver="9">前からのビュー</t>
+<t id="L_BACK_VIEW" ver="9">後ろからのビュー</t>
+<t id="M_VIEW" ver="9">ビュー</t>
+<t id="M_SHOW_EDGES" ver="9">エッジ表示</t>
+<t id="M_SHOW_FACES" ver="9">フェース表示</t>
+<t id="L_ANA_MODIFIED" ver="9">変更:</t>
+<t id="L_ANA_MANIFOLD" ver="9">多様:</t>
+<t id="L_ANA_INTERSECTING_TRIANGLES" ver="9">交差した三角パッチ:</t>
+<t id="L_ANA_NORMALS" ver="9">法線:</t>
+<t id="L_ANA_LOOP_EDGES" ver="9">閉じたエッジ:</t>
+<t id="L_ANA_HIGHLY_CONNECTED" ver="9">高集約のエッジ:</t>
+<t id="L_ANA_VERTICES" ver="9">点:</t>
+<t id="L_ANA_EDGES" ver="9">エッジ:</t>
+<t id="L_ANA_FACES" ver="9">フェース:</t>
+<t id="L_ANA_SHELLS" ver="9">シェル:</t>
+<t id="L_ANA_ORIENTED" ver="9">方向あり</t>
+<t id="L_ANA_NOT_ORIENTED" ver="9">方向なし</t>
+<t id="M_TOOLS" ver="9">ツール</t>
+<t id="M_BELT_CALCULATOR" ver="9">演算：ベルト</t>
+<t id="M_LEADSCREW_CALCULATOR" ver="9">演算：ボールねじ</t>
+<t id="L_MOTOR_STEP_ANGLE" ver="9">モータのステップ角</t>
+<t id="L_DRIVER_MICROSTEPPING" ver="9">ドライバのマイクロステップ</t>
+<t id="L_BELT_PITCH" ver="9">ベルトピッチ</t>
+<t id="L_TOOTH_COUNT" ver="9">歯数</t>
+<t id="B_CALCULATE" ver="9">計算</t>
+<t id="L_STEPS_PER_MM" ver="9">1mmあたり段数</t>
+<t id="L_TOOTH_COUNT_MUST_INT" ver="9">歯数は整数指定してください</t>
+<t id="L_LEADSCREW_PITCH" ver="9">ボールねじピッチ</t>
+<t id="L_GEAR_RATIO" ver="9">歯車比</t>
+<t id="L_SERIAL_CONNECTION" ver="9">シリアル接続</t>
+<t id="L_VIRTUAL_CONNECTION" ver="9">バーチャルプリンタ</t>
+<t id="L_REPETIER_SERVER_CONNECTION" ver="9">Repetier-Server</t>
+<t id="L_CONNECTOR" ver="9">Connector</t>
+<t id="L_DISABLED" ver="9">無効化</t>
+<t id="L_DTR_LOW_HIGH" ver="9">DTR high->low</t>
+<t id="L_DTR_LOW_HIGH_LOW" ver="9">DTR low->high->low</t>
+<t id="L_DTR_TOGGLE" ver="9">DTR信号の切り替え</t>
+<t id="L_RESET_ON_CONNECT" ver="9">接続時のリセット信号</t>
+<t id="L_RESET_ON_EMERGENCY" ver="9">非常停止でリセット信号</t>
+<t id="L_SEND_EMERGENCY_CMD" ver="9">非常停止送信</t>
+<t id="L_SEND_EMERGENCY_CMD_DTR_TOGGLE" ver="9">非常停止送信とDTRのhigh->low</t>
+<t id="L_SEND_EMERGENCY_CMD_RECONNECT" ver="9">非常停止送信と再接続</t>
+<t id="L_FILE_ASSOCIATIONS" ver="9">ファイルの関連付け</t>
+<t id="L_ASSOCIATE_EXTENSIONS" ver="9">ファイルを関連付け</t>
+<t id="L_CONNECTION_FAILED" ver="9">接続エラーが発生しました: $1. プリンタが接続され、有効化され、接続データが正しいことを確認してください. プリンタ設定を開きますか?</t>
+<t id="L_AUTOENABLE_PARALLEL_TOPVIEW" ver="9">パラレルモードの有効化（上から）</t>
+<t id="L_RESET_DEFAULTS" ver="9">デフォルトにリセット</t>
+<t id="L_REMOVED_DEGENERATED" ver="9">壊れた三角パッチの消去:</t>
+<t id="L_REMOVED_ISOLATED" ver="9">独立三角パッチの消去:</t>
+<t id="L_REMOVED_DOUBLE" ver="9">重なった三角パッチの消去:</t>
+<t id="L_STARTING_ANALYSER" ver="9">オブジェクト分析の開始 ...</t>
+<t id="L_ANALYSER_FINISHED" ver="9">分析終了.</t>
+<t id="L_LOADING_3D_FAILED" ver="9">3d ファイル $1 の読み込み失敗.</t>
+<t id="L_OBJECT_INFORMATIONS" ver="9">オブジェクト情報</t>
+<t id="L_MINIMUM:" ver="9">最小:</t>
+<t id="L_MAXIMUM:" ver="9">最大:</t>
+<t id="L_SIZE:" ver="9">サイズSize:</t>
+<t id="L_VOLUME:" ver="9">体積:</t>
+<t id="L_SURFACE:" ver="9">サーフェス:</t>
+<t id="L_DIMENSIONS:" ver="9">次元:</t>
+<t id="L_SPLIT_OBJECT" ver="9">オブジェクトを分割</t>
+<t id="L_FIX_NORMALS" ver="9">法線修復</t>
+<t id="M_FIT_PRINTER" ver="9">プリンタをフィット</t>
+<t id="M_FIT_OBJECTS" ver="9">オブジェクトをフィット</t>
+<t id="IMPORTING_1" ver="9">$1をインポート</t>
+<t id="L_LOADING..." ver="9">ロード中 ...</t>
+<t id="L_INTERSECTION_TESTS" ver="9">交差のテスト</t>
+<t id="L_FIXING_NORMALS" ver="9">法線修復</t>
+<t id="L_ANA_FIXED_COLLINEAR_TRIANGLES" ver="9">修復された共用三角パッチ:</t>
+<t id="L_ANA_CORRECTED_NORMAL_ORIENTATIONS" ver="9">修復された法線方向:</t>
+<t id="L_OBJECT_IS_MANIFOLD" ver="9">オブジェクトは多様状態です</t>
+<t id="L_OBJECT_IS_NON_MANIFOLD" ver="9">オブジェクト内に集約されてないエッジを検出しました。スライス結果がエラーとなるかもしれません。初めにオブジェクトを修復してください.</t>
+<t id="L_SHOW_COMPASS" ver="9">コンパス表示</t>
+<t id="L_CONFIRM_DELETE_JOB" ver="10">ジョブ $1 を消去してもよろしいですか?</t>
+<t id="L_PRINT_STATE_SAVED_SUCCESSFULLY" ver="10">状態保存に成功しました</t>
+<t id="M_POSPONED_JOBS" ver="10">延期ジョブ</t>
+<t id="M_RESUME_JOB" ver="10">再開</t>
+<t id="M_POSTPONE_JOB" ver="10">カレントジョブを延期</t>
+<t id="W_POSTPONED_PRINT_JOBS" ver="10">延期されたプリントジョブ</t>
+<t id="M_POSTPONED_JOB_SELECT_JOB" ver="10">ジョブの再開</t>
+<t id="M_POSTPONED_JOB_KILL_JOB" ver="10">ジョブの削除</t>
+<t id="M_POSTPONED_JOB_RENAME_JOB" ver="10">ジョブ名の変更</t>
+<t id="L_POSTPONED_JOB_NAME" ver="10">ジョブ名</t>
+<t id="L_NAME_POSTPONED_JOB" ver="10">ジョブに名前を付けてください</t>
+<t id="L_POSTPONED_JOB_DIALOG_DESCRIPTION" ver="10">ジョブ状態の保存は終了しました。今すぐ強制ジョブ保存するか、プリントを再開できます.</t>
+<t id="B_FORCE_SAVE_POSTPONED_JOB" ver="10">&amp;強制</t>
+<t id="B_RESUME_PRINTING_JOB" ver="10">&amp;再開</t>
+<t id="W_POSTPONED_JOB_DIALOG" ver="10">プリントジョブを延期</t>
+<t id="M_TOGGLE_PRINTER_ID" ver="10">プリンタID表示切り替え</t>
+<t id="L_PRINTER_ID" ver="10">プリンタID</t>
+<t id="L_BGCOLOR:" ver="10">背景色:</t>
+<t id="L_EDIT_INSTANCE_NAME" ver="10">プリンタID編集</t>
+<t id="L_ANAYLSING" ver="10">分析</t>
+<t id="L_NOT_TESTED" ver="10">未テスト</t>
+<t id="L_CONNECTOR:" ver="10">Connector:</t>
 </translation>
-

@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Repetier-Host"
-#define MyAppVersion "0.90c+alpha+DS1000"
+#define MyAppVersion "0.90e+beta+DS1000"
 #define MyAppPublisher "repetier"
 #define MyAppURL "https://www.repetier.com"
 #define MyAppExeName "RepetierHost.exe"
@@ -24,7 +24,7 @@ DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
 LicenseFile=Repetier-Host-licence.txt
 OutputDir=installer/windows
-OutputBaseFilename=setupRepetierHost_0_90c_alpha_DS1000
+OutputBaseFilename=setupRepetierHost_0_90e_beta_DS1000
 Compression=lzma
 SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
@@ -68,12 +68,14 @@ Source: "src\RepetierHost\bin\Release\OpenTK.GLControl.dll"; DestDir: "{app}"; F
 Source: "src\RepetierHost\bin\Release\OpenTK.GLControl.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "src\RepetierHost\bin\Release\OpenTK.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "src\data\*"; DestDir: "{app}/data"; Flags: ignoreversion recursesubdirs
-;Source: "win\Slic3r\*"; DestDir: "{app}/Slic3r"; Flags: ignoreversion recursesubdirs; Check: not Is64BitInstallMode
-Source: "win\Slic3r\*"; DestDir: "{app}/Slic3r"; Flags: ignoreversion recursesubdirs; Check: Is64BitInstallMode
+Source: "win\32bit\Slic3r\*"; DestDir: "{app}/Slic3r"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not Is64BitInstallMode
+Source: "win\64bit\Slic3r\*"; DestDir: "{app}/Slic3r"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: Is64BitInstallMode
 Source: "win\pypy\*"; DestDir: "{app}/pypy"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "win\python\*"; DestDir: "{app}/python"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "win\Skeinforge\*"; DestDir: "{app}/Skeinforge"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "src\empty.txt"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "win\Appdata\Roming\Slic3r\*"; DestDir: "{userappdata}\Slic3r"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "win\Auduino\drivers\*"; DestDir: "{app}\Auduino\drivers"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
@@ -85,12 +87,69 @@ Root: HKCU; Subkey:"Software\repetier"; ValueType:string; ValueName:"SkeinforgeP
 Root: HKCU; Subkey:"Software\repetier"; ValueType:string; ValueName:"SkeinforgeCraftPath";ValueData: "{app}\Skeinforge\skeinforge_application\skeinforge_utilities\skeinforge_craft.py"; Check:setSkeinforgeCraft;
 Root: HKCU; Subkey:"Software\repetier\window"; ValueType:string; ValueName:"skeinforgeProfileDir";ValueData: "{%USERPROFILE}\.skeinforge\profiles";  Flags:createvalueifdoesntexist;
 
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"travelFeedrate"; ValueData: "4800"; Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"zAxisFeedrate"; ValueData: "100";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"checkTemp"; ValueData: "00000001";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"checkTempInterval"; ValueData: "00000003";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"disposeX"; ValueData: "0";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"disposeY"; ValueData: "0";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"disposeZ"; ValueData: "20";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"goDisposeAfterJob"; ValueData: "00000001";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"disableHeatedBetAfterJob"; ValueData: "00000001";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"disableExtruderAfterJob"; ValueData: "00000001";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"disableMotorsAfterJob"; ValueData: "00000001";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"printAreaWidth"; ValueData: "105";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"printAreaDepth"; ValueData: "105";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"printAreaHeight"; ValueData: "105";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"dumpAreaLeft"; ValueData: "125";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"dumpAreaFront"; ValueData: "0";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"dumpAreaWidth"; ValueData: "22";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"dumpAreaDepth"; ValueData: "40";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"defaultExtruderTemp"; ValueData: "200";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"defaultHeatedBedTemp"; ValueData: "55";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"filterPath"; ValueData: "yourFilter #in #out";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"runFilterEverySlice"; ValueData: "00000000";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"logM105"; ValueData: "00000000";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"addPrintingTime"; ValueData: "8";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"xhomeMax"; ValueData: "00000000";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"yhomeMax"; ValueData: "00000000";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"zhomeMax"; ValueData: "00000000";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"printerXMax"; ValueData: "105";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"printerXMin"; ValueData: "0";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"printerYMax"; ValueData: "105";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"printerYMin"; ValueData: "0";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"printerBedLeft"; ValueData: "0";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"printerBedFront"; ValueData: "0";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"numExtruder"; ValueData: "00000001";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"printerType"; ValueData: "00000000";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"rostockHeight"; ValueData: "340";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"rostockRadius"; ValueData: "135";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"cncZTop"; ValueData: "0";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"connector"; ValueData: "SerialConnector";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"slic3rPrint"; ValueData: "DS1000_PLA0.25mm";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"slic3rPrinter"; ValueData: "DS1000_PLA";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"slic3rFilament1"; ValueData: "PLA";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"slic3rFilament2"; ValueData: "ABS";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"slic3rFilament3"; ValueData: "ABS";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"skeinforgeProfile"; ValueData: "";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"activeSlicer"; ValueData: "00000000";  Flags:createvalueifdoesntexist;
+;Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"port"; ValueData: "COM1";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"baud"; ValueData: "250000";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"transferProtocol"; ValueData: "00000000";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"resetOnConnect"; ValueData: "00000002";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"resetOnEmergency"; ValueData: "00000002";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"receiveCacheSize"; ValueData: "127";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\window"; ValueType:string; ValueName:"lastLanguage"; ValueData: "jp.xml";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier"; ValueType:string; ValueName:"currentPrinter"; ValueData: "DS1000";  Flags:createvalueifdoesntexist;
+
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: quicklaunchicon
 
 [Run]
+Filename: "{app}\Auduino\drivers\dpinst-x86.exe"; Parameters: "/lm /sw /sa"; WorkingDir: "{app}\Auduino\drivers"; Flags: postinstall skipifsilent; Check: not Is64BitInstallMode
+Filename: "{app}\Auduino\drivers\dpinst-amd64.exe"; Parameters: "/lm /sw /sa"; WorkingDir: "{app}\Auduino\drivers"; Flags: postinstall skipifsilent; Check: Is64BitInstallMode
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, "&", "&&")}}"; Flags: nowait postinstall skipifsilent
 
 [CustomMessages]
