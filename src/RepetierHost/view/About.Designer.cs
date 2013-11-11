@@ -36,6 +36,8 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.labelRepetierInfo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +77,7 @@
             this.labelLicenceAndLibraries.AutoSize = true;
             this.labelLicenceAndLibraries.Location = new System.Drawing.Point(14, 145);
             this.labelLicenceAndLibraries.Name = "labelLicenceAndLibraries";
-            this.labelLicenceAndLibraries.Size = new System.Drawing.Size(108, 13);
+            this.labelLicenceAndLibraries.Size = new System.Drawing.Size(114, 12);
             this.labelLicenceAndLibraries.TabIndex = 3;
             this.labelLicenceAndLibraries.Text = "Licence and Libraries";
             // 
@@ -84,7 +86,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(157, 25);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(128, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(133, 12);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "https://www.repetier.com";
@@ -95,17 +97,36 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(157, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(272, 13);
+            this.label2.Size = new System.Drawing.Size(297, 12);
             this.label2.TabIndex = 5;
             this.label2.Text = "Repetier-Host (C) 2011-2013 Hot-World GmbH && Co. KG";
             // 
             // labelRepetierInfo
             // 
-            this.labelRepetierInfo.Location = new System.Drawing.Point(160, 52);
+            this.labelRepetierInfo.Location = new System.Drawing.Point(160, 38);
             this.labelRepetierInfo.Name = "labelRepetierInfo";
-            this.labelRepetierInfo.Size = new System.Drawing.Size(445, 86);
+            this.labelRepetierInfo.Size = new System.Drawing.Size(445, 53);
             this.labelRepetierInfo.TabIndex = 6;
             this.labelRepetierInfo.Text = resources.GetString("labelRepetierInfo.Text");
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(160, 102);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 24);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Composed: \r\nDivision Engineering Co,Ltd";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(160, 126);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(181, 12);
+            this.linkLabel2.TabIndex = 7;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "http://w3.division-engineering.com";
             // 
             // About
             // 
@@ -113,6 +134,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(618, 448);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.labelRepetierInfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel1);
@@ -140,5 +163,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelRepetierInfo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
