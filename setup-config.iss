@@ -91,8 +91,8 @@ Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueNa
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"zAxisFeedrate"; ValueData: "100";  Flags:createvalueifdoesntexist;
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"checkTemp"; ValueData: "00000001";  Flags:createvalueifdoesntexist;
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"checkTempInterval"; ValueData: "00000003";  Flags:createvalueifdoesntexist;
-Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"disposeX"; ValueData: "0";  Flags:createvalueifdoesntexist;
-Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"disposeY"; ValueData: "0";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"disposeX"; ValueData: "105";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"disposeY"; ValueData: "105";  Flags:createvalueifdoesntexist;
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"disposeZ"; ValueData: "20";  Flags:createvalueifdoesntexist;
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"goDisposeAfterJob"; ValueData: "00000001";  Flags:createvalueifdoesntexist;
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueName:"disableHeatedBetAfterJob"; ValueData: "00000001";  Flags:createvalueifdoesntexist;
@@ -126,8 +126,8 @@ Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueNa
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"rostockRadius"; ValueData: "135";  Flags:createvalueifdoesntexist;
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"cncZTop"; ValueData: "0";  Flags:createvalueifdoesntexist;
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"connector"; ValueData: "SerialConnector";  Flags:createvalueifdoesntexist;
-Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"slic3rPrint"; ValueData: "DS1000_PLA0.25mm";  Flags:createvalueifdoesntexist;
-Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"slic3rPrinter"; ValueData: "DS1000_PLA";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"slic3rPrint"; ValueData: "DS1000_ABS0.1mm";  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"slic3rPrinter"; ValueData: "DS1000_ABS";  Flags:createvalueifdoesntexist;
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"slic3rFilament1"; ValueData: "PLA";  Flags:createvalueifdoesntexist;
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"slic3rFilament2"; ValueData: "ABS";  Flags:createvalueifdoesntexist;
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"slic3rFilament3"; ValueData: "ABS";  Flags:createvalueifdoesntexist;
