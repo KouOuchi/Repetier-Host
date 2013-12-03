@@ -38,7 +38,9 @@
             this.labelRepetierInfo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -53,7 +55,7 @@
             // 
             // textLicence
             // 
-            this.textLicence.Location = new System.Drawing.Point(13, 165);
+            this.textLicence.Location = new System.Drawing.Point(12, 308);
             this.textLicence.Multiline = true;
             this.textLicence.Name = "textLicence";
             this.textLicence.ReadOnly = true;
@@ -64,7 +66,7 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(269, 414);
+            this.buttonOK.Location = new System.Drawing.Point(268, 557);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(80, 22);
             this.buttonOK.TabIndex = 2;
@@ -75,7 +77,7 @@
             // labelLicenceAndLibraries
             // 
             this.labelLicenceAndLibraries.AutoSize = true;
-            this.labelLicenceAndLibraries.Location = new System.Drawing.Point(14, 145);
+            this.labelLicenceAndLibraries.Location = new System.Drawing.Point(10, 293);
             this.labelLicenceAndLibraries.Name = "labelLicenceAndLibraries";
             this.labelLicenceAndLibraries.Size = new System.Drawing.Size(114, 12);
             this.labelLicenceAndLibraries.TabIndex = 3;
@@ -112,7 +114,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(160, 102);
+            this.label1.Location = new System.Drawing.Point(399, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 24);
             this.label1.TabIndex = 8;
@@ -121,19 +123,31 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(160, 126);
+            this.linkLabel2.Location = new System.Drawing.Point(399, 174);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(181, 12);
             this.linkLabel2.TabIndex = 7;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "http://w3.division-engineering.com";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(13, 144);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(380, 126);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(618, 448);
+            this.ClientSize = new System.Drawing.Size(618, 583);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.labelRepetierInfo);
@@ -149,6 +163,7 @@
             this.Text = "About Repetier-Host";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.About_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +180,6 @@
         private System.Windows.Forms.Label labelRepetierInfo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

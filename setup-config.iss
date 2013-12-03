@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Repetier-Host(DS.1000)"
-#define MyAppVersion "1_03"
+#define MyAppVersion "1_04"
 #define MyAppPublisher "repetier"
 #define MyAppURL "https://www.repetier.com"
 #define MyAppExeName "RepetierHost.exe"
@@ -28,6 +28,7 @@ OutputBaseFilename=Setup_{#MyAppName}_{#MyAppVersion}
 Compression=lzma
 SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
+PrivilegesRequired=admin
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -141,6 +142,10 @@ Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:dword; ValueNam
 Root: HKCU; Subkey:"Software\repetier\printer\DS1000"; ValueType:string; ValueName:"receiveCacheSize"; ValueData: "127";  Flags:createvalueifdoesntexist;
 Root: HKCU; Subkey:"Software\repetier\window"; ValueType:string; ValueName:"lastLanguage"; ValueData: "jp.xml";  Flags:createvalueifdoesntexist;
 Root: HKCU; Subkey:"Software\repetier"; ValueType:string; ValueName:"currentPrinter"; ValueData: "DS1000";  Flags:createvalueifdoesntexist;
+
+Root: HKCU; Subkey:"Software\repetier\3D"; ValueType:dword; ValueName:"backgroundTopColor"; ValueData: 4294309365;  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\3D"; ValueType:dword; ValueName:"backgroundBottomColor"; ValueData: 4278206592;  Flags:createvalueifdoesntexist;
+Root: HKCU; Subkey:"Software\repetier\3D"; ValueType:dword; ValueName:"outsidePrintbedColor"; ValueData: 4286578644;  Flags:createvalueifdoesntexist;
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

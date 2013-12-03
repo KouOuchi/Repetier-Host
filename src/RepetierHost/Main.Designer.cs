@@ -1415,7 +1415,7 @@
             this.tabPageTemp.Location = new System.Drawing.Point(4, 22);
             this.tabPageTemp.Name = "tabPageTemp";
             this.tabPageTemp.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTemp.Size = new System.Drawing.Size(529, 304);
+            this.tabPageTemp.Size = new System.Drawing.Size(529, 298);
             this.tabPageTemp.TabIndex = 1;
             this.tabPageTemp.Text = "Temperature Curve";
             this.tabPageTemp.UseVisualStyleBackColor = true;
@@ -1502,7 +1502,7 @@
             this.tabSlicer.Controls.Add(this.slicerPanel);
             this.tabSlicer.Location = new System.Drawing.Point(4, 22);
             this.tabSlicer.Name = "tabSlicer";
-            this.tabSlicer.Size = new System.Drawing.Size(467, 270);
+            this.tabSlicer.Size = new System.Drawing.Size(467, 264);
             this.tabSlicer.TabIndex = 3;
             this.tabSlicer.Text = "Slicer";
             this.tabSlicer.UseVisualStyleBackColor = true;
@@ -1513,7 +1513,7 @@
             this.slicerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.slicerPanel.Location = new System.Drawing.Point(0, 0);
             this.slicerPanel.Name = "slicerPanel";
-            this.slicerPanel.Size = new System.Drawing.Size(467, 270);
+            this.slicerPanel.Size = new System.Drawing.Size(467, 264);
             this.slicerPanel.TabIndex = 0;
             // 
             // tabGCode
@@ -1523,7 +1523,7 @@
             this.tabGCode.Location = new System.Drawing.Point(4, 22);
             this.tabGCode.Name = "tabGCode";
             this.tabGCode.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGCode.Size = new System.Drawing.Size(467, 270);
+            this.tabGCode.Size = new System.Drawing.Size(467, 264);
             this.tabGCode.TabIndex = 1;
             this.tabGCode.Text = "G-Code editor";
             this.tabGCode.UseVisualStyleBackColor = true;
@@ -1534,7 +1534,7 @@
             this.tabPrint.Location = new System.Drawing.Point(4, 22);
             this.tabPrint.Name = "tabPrint";
             this.tabPrint.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPrint.Size = new System.Drawing.Size(467, 270);
+            this.tabPrint.Size = new System.Drawing.Size(467, 264);
             this.tabPrint.TabIndex = 0;
             this.tabPrint.Text = "Manual control";
             this.tabPrint.UseVisualStyleBackColor = true;
@@ -1560,7 +1560,7 @@
             this.MainMenuStrip = this.menu;
             this.MinimumSize = new System.Drawing.Size(640, 480);
             this.Name = "Main";
-            this.Text = "Repetier-Host for DS.1000 ver1.01";
+            this.Text = "Repetier-Host for DS.1000 ver1.04";
             this.Activated += new System.EventHandler(this.Main_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
