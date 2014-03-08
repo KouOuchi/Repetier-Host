@@ -39,6 +39,12 @@ namespace RepetierHost.view
         float lastx = -1000, lasty = -1000, lastz = -1000;
         private PrinterStatus status = PrinterStatus.disconnected;
         private long statusSet=0;
+
+        IDictionary<int, KeyValuePair<float, DateTime>> previous_tempinfo =
+            new Dictionary<int, KeyValuePair<float, DateTime>>();
+        private TimeSpan checkTemperatureTimeSpan = TimeSpan.FromSeconds(20D);
+        private float checkTemperatureDiffRange = 0.2f;
+
         public PrintPanel()
         {
             InitializeComponent();
@@ -198,6 +204,7 @@ namespace RepetierHost.view
         public void ConnectionChanged(string msg) {
             UpdateConStatus(Main.conn.connector.IsConnected());
         }
+
         private void tempUpdate(float extruder, float printbed)
         {
             labelExtruderTemp.Text = extruder.ToString("0.00") + "°C /";
@@ -209,6 +216,9 @@ namespace RepetierHost.view
                 if (switchExtruderHeatOn.On) tr += "/" + ann.getTemperature(-1).ToString() + "°C";
                 else tr += "°C/" + Trans.T("L_OFF");
                 tr += " ";
+
+                // handle thermister failure
+                checkTempHistory(0, extruder);
             }
             else
             {
@@ -218,6 +228,9 @@ namespace RepetierHost.view
                     if (ann.getTemperature(extr)>=20) tr += "/" + ann.getTemperature(extr).ToString() + "°C";
                     else tr += "°C/" + Trans.T("L_OFF");
                     tr += " ";
+
+                    // handle thermister failure
+                    checkTempHistory(extr, extruder);
                 }
             }
             if (con.bedTemp > 0)
@@ -228,6 +241,55 @@ namespace RepetierHost.view
             }
             Main.main.toolTempReading.Text = tr;
         }
+
+        void checkTempHistory(int index, float extruder)
+        {
+            if (switchExtruderHeatOn.On && con.connector.IsConnected())
+            {
+                if (!previous_tempinfo.Keys.Contains(index))
+                {
+                    previous_tempinfo.Add
+                        (index, new KeyValuePair<float, DateTime>(extruder, DateTime.Now));
+                }
+
+                // When themistor failure happenes duaring heat on, sometime "extruder" value isn't
+                // changed.
+                // It's not insufficient that Handling MINTEMP/MAXTEMP event. 
+                if (Math.Abs(previous_tempinfo[index].Key - extruder) <= checkTemperatureDiffRange)
+                {
+                    TimeSpan diff = TimeSpan.FromTicks
+                        (DateTime.Now.Ticks - previous_tempinfo[index].Value.Ticks);
+
+                    RLog.message(string.Format("Test thermistor...{0:0.0}", diff.TotalSeconds));
+
+                    if (diff.TotalSeconds > checkTemperatureTimeSpan.TotalSeconds)
+                    {
+                        RLog.message(string.Format("Detect temperature unchange for {0} seconds.",
+                            checkTemperatureTimeSpan.TotalSeconds));
+
+                        // send EM.
+                        if (con.connector.IsConnected())
+                        {
+                            con.connector.GetInjectLock();
+                            RLog.message("Stop heating extruder.");
+                            con.injectManualCommand("M104 S0");
+                            switchExtruderHeatOn.On = false;
+
+                            RLog.message("Reset.");
+                            con.injectManualCommand("M112");
+                            con.connector.ReturnInjectLock();
+                        }
+                    }
+                }
+                else
+                {
+                    previous_tempinfo[index] =
+                        new KeyValuePair<float, DateTime>(extruder, DateTime.Now);
+                }
+            }
+        }
+
+
         public void analyzerChange() {
             createCommands = false;
             if (ann.getTemperature(-1) > 0)
