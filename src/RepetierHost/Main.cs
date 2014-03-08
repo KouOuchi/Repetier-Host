@@ -310,10 +310,6 @@ namespace RepetierHost
                 Text = basicTitle;
             }
             slicerPanel.UpdateSelection();
-            if (Custom.GetBool("removeUpdates", false))
-                checkForUpdatesToolStripMenuItem.Visible = false;
-            else
-                RHUpdater.checkForUpdates(true);
             UpdateToolbarSize();
             // Add languages
             foreach (Translation t in trans.translations.Values)
@@ -1591,9 +1587,8 @@ namespace RepetierHost
 
         private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RHUpdater.checkForUpdates(false);
+            openLink("http://ds-community.smile-link.org/github/");
         }
-
 
         static bool firstSizeCall = true;
         private void Main_SizeChanged(object sender, EventArgs e)

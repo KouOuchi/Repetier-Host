@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Repetier-Host(DS.1000)"
-#define MyAppVersion "1_05"
+#define MyAppVersion "1_06"
 #define MyAppPublisher "repetier"
 #define MyAppURL "https://www.repetier.com"
 #define MyAppExeName "RepetierHost.exe"
