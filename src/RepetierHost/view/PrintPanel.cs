@@ -42,8 +42,6 @@ namespace RepetierHost.view
 
         IDictionary<int, KeyValuePair<float, DateTime>> previous_tempinfo =
             new Dictionary<int, KeyValuePair<float, DateTime>>();
-        private TimeSpan checkTemperatureTimeSpan = TimeSpan.FromSeconds(20D);
-        private float checkTemperatureDiffRange = 0.2f;
 
         public PrintPanel()
         {
@@ -255,29 +253,30 @@ namespace RepetierHost.view
                 // When themistor failure happenes duaring heat on, sometime "extruder" value isn't
                 // changed.
                 // It's not insufficient that Handling MINTEMP/MAXTEMP event. 
-                if (Math.Abs(previous_tempinfo[index].Key - extruder) <= checkTemperatureDiffRange)
+                if (con.extruderOutput[index] >= 254 &&
+                    Math.Abs(previous_tempinfo[index].Key - extruder) <= Main.globalSettings.WatchTempRange)
                 {
                     TimeSpan diff = TimeSpan.FromTicks
                         (DateTime.Now.Ticks - previous_tempinfo[index].Value.Ticks);
 
-                    RLog.message(string.Format("Test thermistor...{0:0.0}", diff.TotalSeconds));
+                    TimeSpan duration = TimeSpan.FromSeconds(Main.globalSettings.WatchSecond);
 
-                    if (diff.TotalSeconds > checkTemperatureTimeSpan.TotalSeconds)
+                    RLog.message(string.Format("Test thermistor...{0:0} seconds pasts. [Range : +-{1:0.00}]",
+                        diff.TotalSeconds, Main.globalSettings.WatchTempRange));
+
+                    if (diff.TotalSeconds > duration.TotalSeconds)
                     {
                         RLog.message(string.Format("Detect temperature unchange for {0} seconds.",
-                            checkTemperatureTimeSpan.TotalSeconds));
+                            duration.TotalSeconds));
 
                         // send EM.
                         if (con.connector.IsConnected())
                         {
-                            con.connector.GetInjectLock();
                             RLog.message("Stop heating extruder.");
                             con.injectManualCommand("M104 S0");
                             switchExtruderHeatOn.On = false;
-
                             RLog.message("Reset.");
                             con.injectManualCommand("M112");
-                            con.connector.ReturnInjectLock();
                         }
                     }
                 }

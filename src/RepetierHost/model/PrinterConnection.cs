@@ -865,7 +865,7 @@ namespace RepetierHost.model
                     float.TryParse(h, NumberStyles.Float, GCode.format, out et);
                     tempChange = true;
                     setTemperature(n, et);
-                    h = extract(res, "@" + n + ":");
+                    h = extract(res, "@" + (n == 0 ? ":" : n + ":"));
                     int eo = -1;
                     int.TryParse(h, out eo);
                     if (isMarlin) eo *= 2;

@@ -95,6 +95,8 @@ namespace RepetierHost.view
             repetierKey.SetValue("disableQualityReduction", DisableQualityReduction ? 1 : 0);
             repetierKey.SetValue("reduceToolbarSize", ReduceToolbarSize ? 1 : 0);
             RegMemory.SetInt("onOffImageOffset", checkRedGreenSwitch.Checked ? 2 : 0);
+            RegMemory.SetDouble("watchSecond", WatchSecond);
+            RegMemory.SetDouble("watchTempRange", WatchTempRange);
         }
         public void RegToForm()
         {
@@ -103,6 +105,8 @@ namespace RepetierHost.view
             checkDisableQualityReduction.Checked = 1 == (int)repetierKey.GetValue("disableQualityReduction", DisableQualityReduction ? 1 : 0);
             checkReduceToolbarSize.Checked = 1 == (int)repetierKey.GetValue("reduceToolbarSize", ReduceToolbarSize ? 1 : 0);
             checkRedGreenSwitch.Checked = 2 == RegMemory.GetInt("onOffImageOffset", 0);
+            watchSecondNumericUpDown.Value = Convert.ToDecimal(RegMemory.GetDouble("watchSecond", 20));
+            watchTempRangeNumericUpDown.Value = Convert.ToDecimal(RegMemory.GetDouble("watchTempRange", 5.0));
         }
         public static void Associate(string extension,
            string progID, string description)
@@ -154,6 +158,16 @@ namespace RepetierHost.view
         {
             get { return checkReduceToolbarSize.Checked; }
         }
+        public Double WatchSecond
+        {
+            get { return Convert.ToDouble(watchSecondNumericUpDown.Value); }
+        }
+        public Double WatchTempRange
+        {
+            get { return Convert.ToDouble(watchTempRangeNumericUpDown.Value); }
+        }
+
+
         private void buttonAbort_Click(object sender, EventArgs e)
         {
             RegToForm();
