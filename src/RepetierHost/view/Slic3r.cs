@@ -370,7 +370,7 @@ namespace RepetierHost.view
                 */
                 StringBuilder sb = new StringBuilder();
                 if(BasicConfiguration.basicConf.Slic3rVersionGroup>=1 && Main.conn.numberExtruder<=1)
-                    sb.Append("--no-plater --gui-mode expert");
+                    sb.Append("--locale ja_JP --no-plater --gui-mode expert");
                 procSlic3r.EnableRaisingEvents = true;
                 procSlic3r.Exited += new EventHandler(Slic3rExited);
                 procSlic3r.StartInfo.FileName = Main.IsMono ? exe : wrapQuotes(exe);
