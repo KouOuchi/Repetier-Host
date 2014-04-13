@@ -368,9 +368,11 @@ namespace RepetierHost.view
                 if (File.Exists(BasicConfiguration.basicConf.Slic3rExecutable))
                     exe = BasicConfiguration.basicConf.Slic3rExecutable;
                 */
+                Environment.SetEnvironmentVariable("LC_MESSAGES", "ja_JP");
+
                 StringBuilder sb = new StringBuilder();
                 if(BasicConfiguration.basicConf.Slic3rVersionGroup>=1 && Main.conn.numberExtruder<=1)
-                    sb.Append("--locale ja_JP --no-plater --gui-mode expert");
+                    sb.Append("--no-plater --gui-mode expert");
                 procSlic3r.EnableRaisingEvents = true;
                 procSlic3r.Exited += new EventHandler(Slic3rExited);
                 procSlic3r.StartInfo.FileName = Main.IsMono ? exe : wrapQuotes(exe);
@@ -380,6 +382,7 @@ namespace RepetierHost.view
                 procSlic3r.StartInfo.RedirectStandardError = true;
                 procSlic3r.ErrorDataReceived += new DataReceivedEventHandler(OutputDataHandler);
                 procSlic3r.StartInfo.Arguments = sb.ToString();
+                procSlic3r.StartInfo.WorkingDirectory = new FileInfo(exe).DirectoryName;
                 procSlic3r.Start();
                 // Start the asynchronous read of the standard output stream.
                 procSlic3r.BeginOutputReadLine();
