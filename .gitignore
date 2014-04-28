@@ -8,7 +8,12 @@ src/slic3r*
 */.DS_Store
 macosx/RepetierHost.app
 linux/RepetierHost
-win/*
+win/32bit/*
+win/64bit/*
+win/Auduino/*
+win/pypy/*
+win/python/*
+win/skeinforge/*
 iRapid/*
 installer/*
 RepetierHostMacOSX.sparseimage
