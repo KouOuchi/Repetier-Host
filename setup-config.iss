@@ -29,6 +29,7 @@ Compression=lzma
 SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 PrivilegesRequired=admin
+ArchitecturesAllowed=x64
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -69,7 +70,7 @@ Source: "src\RepetierHost\bin\Release\OpenTK.GLControl.dll"; DestDir: "{app}"; F
 Source: "src\RepetierHost\bin\Release\OpenTK.GLControl.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "src\RepetierHost\bin\Release\OpenTK.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "src\data\*"; DestDir: "{app}/data"; Flags: ignoreversion recursesubdirs
-Source: "win\32bit\Slic3r\*"; DestDir: "{app}/Slic3r"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not Is64BitInstallMode
+;Source: "win\32bit\Slic3r\*"; DestDir: "{app}/Slic3r"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not Is64BitInstallMode
 Source: "win\64bit\Slic3r\*"; DestDir: "{app}/Slic3r"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: Is64BitInstallMode
 Source: "win\pypy\*"; DestDir: "{app}/pypy"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "win\python\*"; DestDir: "{app}/python"; Flags: ignoreversion recursesubdirs createallsubdirs
