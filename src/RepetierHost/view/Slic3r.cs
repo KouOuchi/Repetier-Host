@@ -368,7 +368,7 @@ namespace RepetierHost.view
                 if (File.Exists(BasicConfiguration.basicConf.Slic3rExecutable))
                     exe = BasicConfiguration.basicConf.Slic3rExecutable;
                 */
-                Environment.SetEnvironmentVariable("LC_MESSAGES", "ja_JP");
+                Environment.SetEnvironmentVariable("LC_MESSAGES", "ja_JP", EnvironmentVariableTarget.Process);
 
                 StringBuilder sb = new StringBuilder();
                 if(BasicConfiguration.basicConf.Slic3rVersionGroup>=1 && Main.conn.numberExtruder<=1)
