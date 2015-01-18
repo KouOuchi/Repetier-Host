@@ -1,6 +1,6 @@
 # Repetier-OSD
 
-![Startscreen](https://github.com/KouOuchi/Repetier-Host/blob/master/screenshots/startpage.png?raw=true)
+![Startscreen](https://github.com/KouOuchi/Repetier-Host/blob/DS.1000_Installer_Windows/screenshots/startpage.jpg?raw=true)
 
 Software for controlling RepRap style 3D-printer like Mendel, Darwin or 
 Prusa mendel. Works with most firmware types. It is optimized to work
