@@ -73,9 +73,9 @@ Source: "src\data\*"; DestDir: "{app}/data"; Flags: ignoreversion recursesubdirs
 ;Source: "win\32bit\Slic3r\*"; DestDir: "{app}/Slic3r"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not Is64BitInstallMode
 Source: "win\64bit\Slic3r\*"; DestDir: "{app}/Slic3r"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: IsWin64
 Source: "win\32bit\Slic3r\*"; DestDir: "{app}/Slic3r"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: Not IsWin64
-Source: "win\pypy\*"; DestDir: "{app}/pypy"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "win\python\*"; DestDir: "{app}/python"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "win\Skeinforge\*"; DestDir: "{app}/Skeinforge"; Flags: ignoreversion recursesubdirs createallsubdirs
+;Source: "win\pypy\*"; DestDir: "{app}/pypy"; Flags: ignoreversion recursesubdirs createallsubdirs
+;Source: "win\python\*"; DestDir: "{app}/python"; Flags: ignoreversion recursesubdirs createallsubdirs
+;Source: "win\Skeinforge\*"; DestDir: "{app}/Skeinforge"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "src\empty.txt"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 Source: "win\Auduino\drivers\*"; DestDir: "{app}\Auduino\drivers"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files

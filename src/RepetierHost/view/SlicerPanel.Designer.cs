@@ -85,7 +85,7 @@
             this.groupBox2.Controls.Add(this.labelPrintSettings);
             this.groupBox2.Location = new System.Drawing.Point(3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(604, 211);
+            this.groupBox2.Size = new System.Drawing.Size(604, 195);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Slic3r";
@@ -94,9 +94,9 @@
             // 
             this.buttonSetupSlic3r.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSetupSlic3r.Image = ((System.Drawing.Image)(resources.GetObject("buttonSetupSlic3r.Image")));
-            this.buttonSetupSlic3r.Location = new System.Drawing.Point(481, 179);
+            this.buttonSetupSlic3r.Location = new System.Drawing.Point(481, 165);
             this.buttonSetupSlic3r.Name = "buttonSetupSlic3r";
-            this.buttonSetupSlic3r.Size = new System.Drawing.Size(111, 23);
+            this.buttonSetupSlic3r.Size = new System.Drawing.Size(111, 21);
             this.buttonSetupSlic3r.TabIndex = 3;
             this.buttonSetupSlic3r.Text = "Setup";
             this.buttonSetupSlic3r.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -107,9 +107,9 @@
             // 
             this.buttonSlic3rConfigure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSlic3rConfigure.Image = ((System.Drawing.Image)(resources.GetObject("buttonSlic3rConfigure.Image")));
-            this.buttonSlic3rConfigure.Location = new System.Drawing.Point(481, 20);
+            this.buttonSlic3rConfigure.Location = new System.Drawing.Point(481, 18);
             this.buttonSlic3rConfigure.Name = "buttonSlic3rConfigure";
-            this.buttonSlic3rConfigure.Size = new System.Drawing.Size(111, 23);
+            this.buttonSlic3rConfigure.Size = new System.Drawing.Size(111, 21);
             this.buttonSlic3rConfigure.TabIndex = 2;
             this.buttonSlic3rConfigure.Text = "Configure";
             this.buttonSlic3rConfigure.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -122,9 +122,9 @@
             this.comboSlic3rPrinterSettings.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Slic3rPrinter", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.comboSlic3rPrinterSettings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSlic3rPrinterSettings.FormattingEnabled = true;
-            this.comboSlic3rPrinterSettings.Location = new System.Drawing.Point(126, 73);
+            this.comboSlic3rPrinterSettings.Location = new System.Drawing.Point(126, 67);
             this.comboSlic3rPrinterSettings.Name = "comboSlic3rPrinterSettings";
-            this.comboSlic3rPrinterSettings.Size = new System.Drawing.Size(163, 21);
+            this.comboSlic3rPrinterSettings.Size = new System.Drawing.Size(163, 20);
             this.comboSlic3rPrinterSettings.TabIndex = 1;
             this.comboSlic3rPrinterSettings.SelectedIndexChanged += new System.EventHandler(this.comboSlic3rPrinterSettings_SelectedIndexChanged);
             // 
@@ -138,9 +138,9 @@
             this.comboSlic3rFilamentSettings3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Slic3rFilament3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.comboSlic3rFilamentSettings3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSlic3rFilamentSettings3.FormattingEnabled = true;
-            this.comboSlic3rFilamentSettings3.Location = new System.Drawing.Point(126, 179);
+            this.comboSlic3rFilamentSettings3.Location = new System.Drawing.Point(126, 165);
             this.comboSlic3rFilamentSettings3.Name = "comboSlic3rFilamentSettings3";
-            this.comboSlic3rFilamentSettings3.Size = new System.Drawing.Size(163, 21);
+            this.comboSlic3rFilamentSettings3.Size = new System.Drawing.Size(163, 20);
             this.comboSlic3rFilamentSettings3.TabIndex = 1;
             this.comboSlic3rFilamentSettings3.SelectedIndexChanged += new System.EventHandler(this.comboSlic3rFilamentSettings3_SelectedIndexChanged);
             // 
@@ -150,9 +150,9 @@
             this.comboSlic3rFilamentSettings2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Slic3rFilament2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.comboSlic3rFilamentSettings2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSlic3rFilamentSettings2.FormattingEnabled = true;
-            this.comboSlic3rFilamentSettings2.Location = new System.Drawing.Point(126, 152);
+            this.comboSlic3rFilamentSettings2.Location = new System.Drawing.Point(126, 140);
             this.comboSlic3rFilamentSettings2.Name = "comboSlic3rFilamentSettings2";
-            this.comboSlic3rFilamentSettings2.Size = new System.Drawing.Size(163, 21);
+            this.comboSlic3rFilamentSettings2.Size = new System.Drawing.Size(163, 20);
             this.comboSlic3rFilamentSettings2.TabIndex = 1;
             this.comboSlic3rFilamentSettings2.SelectedIndexChanged += new System.EventHandler(this.comboSlic3rFilamentSettings2_SelectedIndexChanged);
             // 
@@ -162,18 +162,18 @@
             this.comboSlic3rFilamentSettings.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Slic3rFilament1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.comboSlic3rFilamentSettings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSlic3rFilamentSettings.FormattingEnabled = true;
-            this.comboSlic3rFilamentSettings.Location = new System.Drawing.Point(126, 127);
+            this.comboSlic3rFilamentSettings.Location = new System.Drawing.Point(126, 117);
             this.comboSlic3rFilamentSettings.Name = "comboSlic3rFilamentSettings";
-            this.comboSlic3rFilamentSettings.Size = new System.Drawing.Size(163, 21);
+            this.comboSlic3rFilamentSettings.Size = new System.Drawing.Size(163, 20);
             this.comboSlic3rFilamentSettings.TabIndex = 1;
             this.comboSlic3rFilamentSettings.SelectedIndexChanged += new System.EventHandler(this.comboSlic3rFilamentSettings_SelectedIndexChanged);
             // 
             // labelSlic3rExtruder3
             // 
             this.labelSlic3rExtruder3.AutoSize = true;
-            this.labelSlic3rExtruder3.Location = new System.Drawing.Point(10, 182);
+            this.labelSlic3rExtruder3.Location = new System.Drawing.Point(10, 168);
             this.labelSlic3rExtruder3.Name = "labelSlic3rExtruder3";
-            this.labelSlic3rExtruder3.Size = new System.Drawing.Size(58, 13);
+            this.labelSlic3rExtruder3.Size = new System.Drawing.Size(60, 12);
             this.labelSlic3rExtruder3.TabIndex = 0;
             this.labelSlic3rExtruder3.Text = "Extruder 3:";
             // 
@@ -183,18 +183,18 @@
             this.comboSlic3rPrintSettings.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Slic3rPrint", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.comboSlic3rPrintSettings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSlic3rPrintSettings.FormattingEnabled = true;
-            this.comboSlic3rPrintSettings.Location = new System.Drawing.Point(126, 46);
+            this.comboSlic3rPrintSettings.Location = new System.Drawing.Point(126, 42);
             this.comboSlic3rPrintSettings.Name = "comboSlic3rPrintSettings";
-            this.comboSlic3rPrintSettings.Size = new System.Drawing.Size(163, 21);
+            this.comboSlic3rPrintSettings.Size = new System.Drawing.Size(163, 20);
             this.comboSlic3rPrintSettings.TabIndex = 1;
             this.comboSlic3rPrintSettings.SelectedIndexChanged += new System.EventHandler(this.comboSlic3rPrintSettings_SelectedIndexChanged);
             // 
             // labelSlic3rExtruder2
             // 
             this.labelSlic3rExtruder2.AutoSize = true;
-            this.labelSlic3rExtruder2.Location = new System.Drawing.Point(10, 155);
+            this.labelSlic3rExtruder2.Location = new System.Drawing.Point(10, 143);
             this.labelSlic3rExtruder2.Name = "labelSlic3rExtruder2";
-            this.labelSlic3rExtruder2.Size = new System.Drawing.Size(58, 13);
+            this.labelSlic3rExtruder2.Size = new System.Drawing.Size(60, 12);
             this.labelSlic3rExtruder2.TabIndex = 0;
             this.labelSlic3rExtruder2.Text = "Extruder 2:";
             // 
@@ -205,11 +205,11 @@
             this.switchSlic3rActive.ButtonFlatBorderSize = 1;
             this.switchSlic3rActive.ButtonFlatStyle = System.Windows.Forms.FlatStyle.Standard;
             this.switchSlic3rActive.ButtonTextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.switchSlic3rActive.Location = new System.Drawing.Point(10, 20);
-            this.switchSlic3rActive.MinimumSize = new System.Drawing.Size(90, 23);
+            this.switchSlic3rActive.Location = new System.Drawing.Point(10, 18);
+            this.switchSlic3rActive.MinimumSize = new System.Drawing.Size(90, 21);
             this.switchSlic3rActive.Name = "switchSlic3rActive";
             this.switchSlic3rActive.On = false;
-            this.switchSlic3rActive.Size = new System.Drawing.Size(100, 23);
+            this.switchSlic3rActive.Size = new System.Drawing.Size(100, 21);
             this.switchSlic3rActive.TabIndex = 0;
             this.switchSlic3rActive.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.switchSlic3rActive.TextOff = "Active";
@@ -219,18 +219,18 @@
             // labelSlic3rExtruder1
             // 
             this.labelSlic3rExtruder1.AutoSize = true;
-            this.labelSlic3rExtruder1.Location = new System.Drawing.Point(10, 130);
+            this.labelSlic3rExtruder1.Location = new System.Drawing.Point(10, 120);
             this.labelSlic3rExtruder1.Name = "labelSlic3rExtruder1";
-            this.labelSlic3rExtruder1.Size = new System.Drawing.Size(58, 13);
+            this.labelSlic3rExtruder1.Size = new System.Drawing.Size(60, 12);
             this.labelSlic3rExtruder1.TabIndex = 0;
             this.labelSlic3rExtruder1.Text = "Extruder 1:";
             // 
             // labelPrinterSettings
             // 
             this.labelPrinterSettings.AutoSize = true;
-            this.labelPrinterSettings.Location = new System.Drawing.Point(10, 76);
+            this.labelPrinterSettings.Location = new System.Drawing.Point(10, 70);
             this.labelPrinterSettings.Name = "labelPrinterSettings";
-            this.labelPrinterSettings.Size = new System.Drawing.Size(79, 13);
+            this.labelPrinterSettings.Size = new System.Drawing.Size(86, 12);
             this.labelPrinterSettings.TabIndex = 0;
             this.labelPrinterSettings.Text = "Printer settings:";
             // 
@@ -238,7 +238,7 @@
             // 
             this.labelFilamentSettings.AutoSize = true;
             this.labelFilamentSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFilamentSettings.Location = new System.Drawing.Point(10, 103);
+            this.labelFilamentSettings.Location = new System.Drawing.Point(10, 95);
             this.labelFilamentSettings.Name = "labelFilamentSettings";
             this.labelFilamentSettings.Size = new System.Drawing.Size(106, 13);
             this.labelFilamentSettings.TabIndex = 0;
@@ -247,9 +247,9 @@
             // labelPrintSettings
             // 
             this.labelPrintSettings.AutoSize = true;
-            this.labelPrintSettings.Location = new System.Drawing.Point(10, 49);
+            this.labelPrintSettings.Location = new System.Drawing.Point(10, 45);
             this.labelPrintSettings.Name = "labelPrintSettings";
-            this.labelPrintSettings.Size = new System.Drawing.Size(70, 13);
+            this.labelPrintSettings.Size = new System.Drawing.Size(76, 12);
             this.labelPrintSettings.TabIndex = 0;
             this.labelPrintSettings.Text = "Print settings:";
             // 
@@ -264,18 +264,19 @@
             this.groupSkeinforge.Controls.Add(this.labelProfile);
             this.groupSkeinforge.Location = new System.Drawing.Point(3, 2);
             this.groupSkeinforge.Name = "groupSkeinforge";
-            this.groupSkeinforge.Size = new System.Drawing.Size(604, 86);
+            this.groupSkeinforge.Size = new System.Drawing.Size(604, 79);
             this.groupSkeinforge.TabIndex = 2;
             this.groupSkeinforge.TabStop = false;
             this.groupSkeinforge.Text = "Skeinforge";
+            this.groupSkeinforge.Visible = false;
             // 
             // buttonSetupSkeinforge
             // 
             this.buttonSetupSkeinforge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSetupSkeinforge.Image = ((System.Drawing.Image)(resources.GetObject("buttonSetupSkeinforge.Image")));
-            this.buttonSetupSkeinforge.Location = new System.Drawing.Point(481, 48);
+            this.buttonSetupSkeinforge.Location = new System.Drawing.Point(481, 44);
             this.buttonSetupSkeinforge.Name = "buttonSetupSkeinforge";
-            this.buttonSetupSkeinforge.Size = new System.Drawing.Size(111, 23);
+            this.buttonSetupSkeinforge.Size = new System.Drawing.Size(111, 21);
             this.buttonSetupSkeinforge.TabIndex = 3;
             this.buttonSetupSkeinforge.Text = "Setup";
             this.buttonSetupSkeinforge.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -286,9 +287,9 @@
             // 
             this.buttonSkeinConfigure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSkeinConfigure.Image = ((System.Drawing.Image)(resources.GetObject("buttonSkeinConfigure.Image")));
-            this.buttonSkeinConfigure.Location = new System.Drawing.Point(481, 19);
+            this.buttonSkeinConfigure.Location = new System.Drawing.Point(481, 18);
             this.buttonSkeinConfigure.Name = "buttonSkeinConfigure";
-            this.buttonSkeinConfigure.Size = new System.Drawing.Size(111, 23);
+            this.buttonSkeinConfigure.Size = new System.Drawing.Size(111, 21);
             this.buttonSkeinConfigure.TabIndex = 2;
             this.buttonSkeinConfigure.Text = "Configure";
             this.buttonSkeinConfigure.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -301,9 +302,9 @@
             this.comboSkeinProfile.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "SkeinforgeProfile", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.comboSkeinProfile.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSkeinProfile.FormattingEnabled = true;
-            this.comboSkeinProfile.Location = new System.Drawing.Point(126, 50);
+            this.comboSkeinProfile.Location = new System.Drawing.Point(126, 46);
             this.comboSkeinProfile.Name = "comboSkeinProfile";
-            this.comboSkeinProfile.Size = new System.Drawing.Size(163, 21);
+            this.comboSkeinProfile.Size = new System.Drawing.Size(163, 20);
             this.comboSkeinProfile.TabIndex = 1;
             this.comboSkeinProfile.SelectedIndexChanged += new System.EventHandler(this.comboSkeinProfile_SelectedIndexChanged);
             // 
@@ -314,11 +315,11 @@
             this.switchSkeinforge.ButtonFlatBorderSize = 1;
             this.switchSkeinforge.ButtonFlatStyle = System.Windows.Forms.FlatStyle.Standard;
             this.switchSkeinforge.ButtonTextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.switchSkeinforge.Location = new System.Drawing.Point(6, 19);
-            this.switchSkeinforge.MinimumSize = new System.Drawing.Size(90, 23);
+            this.switchSkeinforge.Location = new System.Drawing.Point(6, 18);
+            this.switchSkeinforge.MinimumSize = new System.Drawing.Size(90, 21);
             this.switchSkeinforge.Name = "switchSkeinforge";
             this.switchSkeinforge.On = false;
-            this.switchSkeinforge.Size = new System.Drawing.Size(100, 23);
+            this.switchSkeinforge.Size = new System.Drawing.Size(100, 21);
             this.switchSkeinforge.TabIndex = 0;
             this.switchSkeinforge.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.switchSkeinforge.TextOff = "Active";
@@ -328,9 +329,9 @@
             // labelProfile
             // 
             this.labelProfile.AutoSize = true;
-            this.labelProfile.Location = new System.Drawing.Point(10, 53);
+            this.labelProfile.Location = new System.Drawing.Point(10, 49);
             this.labelProfile.Name = "labelProfile";
-            this.labelProfile.Size = new System.Drawing.Size(39, 13);
+            this.labelProfile.Size = new System.Drawing.Size(40, 12);
             this.labelProfile.TabIndex = 0;
             this.labelProfile.Text = "Profile:";
             // 
@@ -342,7 +343,7 @@
             this.buttonStartSlicing.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartSlicing.Image")));
             this.buttonStartSlicing.Location = new System.Drawing.Point(6, 3);
             this.buttonStartSlicing.Name = "buttonStartSlicing";
-            this.buttonStartSlicing.Size = new System.Drawing.Size(476, 67);
+            this.buttonStartSlicing.Size = new System.Drawing.Size(476, 62);
             this.buttonStartSlicing.TabIndex = 1;
             this.buttonStartSlicing.Text = "Slice with Skeinforge";
             this.buttonStartSlicing.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -355,7 +356,7 @@
             this.buttonKillSlicing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKillSlicing.Location = new System.Drawing.Point(488, 3);
             this.buttonKillSlicing.Name = "buttonKillSlicing";
-            this.buttonKillSlicing.Size = new System.Drawing.Size(111, 67);
+            this.buttonKillSlicing.Size = new System.Drawing.Size(111, 62);
             this.buttonKillSlicing.TabIndex = 3;
             this.buttonKillSlicing.Text = "Kill slicing\r\nprocess";
             this.buttonKillSlicing.UseVisualStyleBackColor = true;
@@ -368,37 +369,37 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(610, 81);
+            this.panelTop.Size = new System.Drawing.Size(610, 75);
             this.panelTop.TabIndex = 4;
             // 
             // panelSlic3rPos
             // 
             this.panelSlic3rPos.Controls.Add(this.groupBox2);
             this.panelSlic3rPos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSlic3rPos.Location = new System.Drawing.Point(0, 81);
+            this.panelSlic3rPos.Location = new System.Drawing.Point(0, 75);
             this.panelSlic3rPos.Name = "panelSlic3rPos";
-            this.panelSlic3rPos.Size = new System.Drawing.Size(610, 219);
+            this.panelSlic3rPos.Size = new System.Drawing.Size(610, 202);
             this.panelSlic3rPos.TabIndex = 5;
             // 
             // panelSkeinforgePos
             // 
             this.panelSkeinforgePos.Controls.Add(this.groupSkeinforge);
             this.panelSkeinforgePos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSkeinforgePos.Location = new System.Drawing.Point(0, 300);
+            this.panelSkeinforgePos.Location = new System.Drawing.Point(0, 277);
             this.panelSkeinforgePos.Name = "panelSkeinforgePos";
-            this.panelSkeinforgePos.Size = new System.Drawing.Size(610, 96);
+            this.panelSkeinforgePos.Size = new System.Drawing.Size(610, 89);
             this.panelSkeinforgePos.TabIndex = 6;
             // 
             // SlicerPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.panelSkeinforgePos);
             this.Controls.Add(this.panelSlic3rPos);
             this.Controls.Add(this.panelTop);
             this.Name = "SlicerPanel";
-            this.Size = new System.Drawing.Size(610, 397);
+            this.Size = new System.Drawing.Size(610, 366);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainBindingSource)).EndInit();

@@ -43,7 +43,7 @@ namespace RepetierHost.view
             buttonOK.Text = Trans.T("B_OK");
             Text = Trans.T("W_ABOUT_REPETIER_HOST");
             labelLicenceAndLibraries.Text = Trans.T("L_LICENCE_AND_LIBRARIES");
-            labelRepetierInfo.Text = Trans.T("L_REPETIER_INFO");
+            //labelRepetierInfo.Text = Trans.T("L_REPETIER_INFO");
         }
         private void buttonOK_Click(object sender, EventArgs e)
         {

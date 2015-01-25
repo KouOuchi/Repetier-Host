@@ -972,146 +972,149 @@
             // repetierHostHomepageToolStripMenuItem
             // 
             this.repetierHostHomepageToolStripMenuItem.Name = "repetierHostHomepageToolStripMenuItem";
-            this.repetierHostHomepageToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
-            this.repetierHostHomepageToolStripMenuItem.Text = "Repetier-Host homepage";
+            this.repetierHostHomepageToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.repetierHostHomepageToolStripMenuItem.Text = "Repetier-OSD homepage";
             this.repetierHostHomepageToolStripMenuItem.Click += new System.EventHandler(this.repetierHostHomepageToolStripMenuItem_Click);
             // 
             // repetierHostDownloadPageToolStripMenuItem
             // 
             this.repetierHostDownloadPageToolStripMenuItem.Name = "repetierHostDownloadPageToolStripMenuItem";
-            this.repetierHostDownloadPageToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
-            this.repetierHostDownloadPageToolStripMenuItem.Text = "Repetier-Host download page";
+            this.repetierHostDownloadPageToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.repetierHostDownloadPageToolStripMenuItem.Text = "Repetier-OSD download page";
             this.repetierHostDownloadPageToolStripMenuItem.Click += new System.EventHandler(this.repetierHostDownloadPageToolStripMenuItem_Click);
             // 
             // manualToolStripMenuItem
             // 
+            this.manualToolStripMenuItem.Enabled = false;
             this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.manualToolStripMenuItem.Text = "Manual";
             this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(245, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(244, 6);
             // 
             // slic3rHomepageToolStripMenuItem
             // 
             this.slic3rHomepageToolStripMenuItem.Name = "slic3rHomepageToolStripMenuItem";
-            this.slic3rHomepageToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.slic3rHomepageToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.slic3rHomepageToolStripMenuItem.Text = "Slic3r homepage";
             this.slic3rHomepageToolStripMenuItem.Click += new System.EventHandler(this.slic3rHomepageToolStripMenuItem_Click);
             // 
             // skeinforgeHomepageToolStripMenuItem
             // 
+            this.skeinforgeHomepageToolStripMenuItem.Enabled = false;
             this.skeinforgeHomepageToolStripMenuItem.Name = "skeinforgeHomepageToolStripMenuItem";
-            this.skeinforgeHomepageToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.skeinforgeHomepageToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.skeinforgeHomepageToolStripMenuItem.Text = "Skeinforge homepage";
             this.skeinforgeHomepageToolStripMenuItem.Click += new System.EventHandler(this.skeinforgeHomepageToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(245, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(244, 6);
             // 
             // repRapWebsiteToolStripMenuItem
             // 
             this.repRapWebsiteToolStripMenuItem.Name = "repRapWebsiteToolStripMenuItem";
-            this.repRapWebsiteToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.repRapWebsiteToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.repRapWebsiteToolStripMenuItem.Text = "RepRap website";
             this.repRapWebsiteToolStripMenuItem.Click += new System.EventHandler(this.repRapWebsiteToolStripMenuItem_Click);
             // 
             // repRapForumToolStripMenuItem
             // 
             this.repRapForumToolStripMenuItem.Name = "repRapForumToolStripMenuItem";
-            this.repRapForumToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.repRapForumToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.repRapForumToolStripMenuItem.Text = "RepRap forum";
             this.repRapForumToolStripMenuItem.Click += new System.EventHandler(this.repRapForumToolStripMenuItem_Click);
             // 
             // thingiverseNewestToolStripMenuItem
             // 
             this.thingiverseNewestToolStripMenuItem.Name = "thingiverseNewestToolStripMenuItem";
-            this.thingiverseNewestToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.thingiverseNewestToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.thingiverseNewestToolStripMenuItem.Text = "Thingiverse newest";
             this.thingiverseNewestToolStripMenuItem.Click += new System.EventHandler(this.thingiverseNewestToolStripMenuItem_Click);
             // 
             // thingiversePopularToolStripMenuItem
             // 
             this.thingiversePopularToolStripMenuItem.Name = "thingiversePopularToolStripMenuItem";
-            this.thingiversePopularToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.thingiversePopularToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.thingiversePopularToolStripMenuItem.Text = "Thingiverse popular";
             this.thingiversePopularToolStripMenuItem.Click += new System.EventHandler(this.thingiversePopularToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(245, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(244, 6);
             // 
             // aboutRepetierHostToolStripMenuItem
             // 
             this.aboutRepetierHostToolStripMenuItem.Name = "aboutRepetierHostToolStripMenuItem";
-            this.aboutRepetierHostToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
-            this.aboutRepetierHostToolStripMenuItem.Text = "&About Repetier-Host";
+            this.aboutRepetierHostToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.aboutRepetierHostToolStripMenuItem.Text = "&About Repetier-OSD";
             this.aboutRepetierHostToolStripMenuItem.Click += new System.EventHandler(this.aboutRepetierHostToolStripMenuItem_Click);
             // 
             // donateToolStripMenuItem
             // 
             this.donateToolStripMenuItem.Name = "donateToolStripMenuItem";
-            this.donateToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.donateToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.donateToolStripMenuItem.Text = "Donate";
             this.donateToolStripMenuItem.Click += new System.EventHandler(this.donateToolStripMenuItem_Click);
             // 
             // checkForUpdatesToolStripMenuItem
             // 
             this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
-            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.checkForUpdatesToolStripMenuItem.Text = "Check for updates";
             this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdatesToolStripMenuItem_Click);
             // 
             // toolStripAskSeperator
             // 
             this.toolStripAskSeperator.Name = "toolStripAskSeperator";
-            this.toolStripAskSeperator.Size = new System.Drawing.Size(245, 6);
+            this.toolStripAskSeperator.Size = new System.Drawing.Size(244, 6);
             // 
             // supportToolStripMenuItem
             // 
             this.supportToolStripMenuItem.Name = "supportToolStripMenuItem";
-            this.supportToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.supportToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.supportToolStripMenuItem.Text = "Support";
+            this.supportToolStripMenuItem.Visible = false;
             this.supportToolStripMenuItem.Click += new System.EventHandler(this.supportToolStripMenuItem_Click);
             // 
             // extraUrl1ToolStripMenuItem
             // 
             this.extraUrl1ToolStripMenuItem.Name = "extraUrl1ToolStripMenuItem";
-            this.extraUrl1ToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.extraUrl1ToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.extraUrl1ToolStripMenuItem.Text = "extra url1";
             this.extraUrl1ToolStripMenuItem.Click += new System.EventHandler(this.extraUrl1ToolStripMenuItem_Click);
             // 
             // extraUrl2ToolStripMenuItem
             // 
             this.extraUrl2ToolStripMenuItem.Name = "extraUrl2ToolStripMenuItem";
-            this.extraUrl2ToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.extraUrl2ToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.extraUrl2ToolStripMenuItem.Text = "extra url2";
             this.extraUrl2ToolStripMenuItem.Click += new System.EventHandler(this.extraUrl2ToolStripMenuItem_Click);
             // 
             // extraUrl3ToolStripMenuItem
             // 
             this.extraUrl3ToolStripMenuItem.Name = "extraUrl3ToolStripMenuItem";
-            this.extraUrl3ToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.extraUrl3ToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.extraUrl3ToolStripMenuItem.Text = "extra url3";
             this.extraUrl3ToolStripMenuItem.Click += new System.EventHandler(this.extraUrl3ToolStripMenuItem_Click);
             // 
             // extraUrl4ToolStripMenuItem
             // 
             this.extraUrl4ToolStripMenuItem.Name = "extraUrl4ToolStripMenuItem";
-            this.extraUrl4ToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.extraUrl4ToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.extraUrl4ToolStripMenuItem.Text = "extra url4";
             this.extraUrl4ToolStripMenuItem.Click += new System.EventHandler(this.extraUrl4ToolStripMenuItem_Click);
             // 
             // extraUrl5ToolStripMenuItem
             // 
             this.extraUrl5ToolStripMenuItem.Name = "extraUrl5ToolStripMenuItem";
-            this.extraUrl5ToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.extraUrl5ToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.extraUrl5ToolStripMenuItem.Text = "extra url5";
             this.extraUrl5ToolStripMenuItem.Click += new System.EventHandler(this.extraUrl5ToolStripMenuItem_Click);
             // 

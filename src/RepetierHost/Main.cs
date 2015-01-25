@@ -1010,7 +1010,7 @@ namespace RepetierHost
         }
         private void repetierHostHomepageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openLink("http://www.repetier.com");
+            openLink("http://w3.division-engineering.com");
         }
 
         private void manualToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1542,7 +1542,7 @@ namespace RepetierHost
 
         public void repetierHostDownloadPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openLink(Custom.GetString("downloadUrl","http://www.repetier.com/download/"));
+            openLink(Custom.GetString("downloadUrl","http://ds-community.smile-link.org/github/?lang=en"));
         }
 
         private void sendScript1ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1604,7 +1604,7 @@ namespace RepetierHost
 
         private void donateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openLink("http://www.repetier.com/donate-or-support/");
+            openLink("http://w3.divisoin-engineering.com/");
         }
 
         private void toolShowTravel_Click(object sender, EventArgs e)
